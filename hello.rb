@@ -1,8 +1,7 @@
-print "hello world!" # そのまま出力する
-puts "hello world (puts)" # 末尾に改行を加えて出力する
-p "hello world (p)" # データの形式がわかるように出力する
+# 変数
+message = "hello world"
+p message
 
-=begin
-複数行
-コメントの書き方
-=end
+# 定数
+ADMIN_EMAIL = "mail@example.com"
+p ADMIN_EMAIL

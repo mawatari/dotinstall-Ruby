@@ -1,7 +1,4 @@
-# 変数
-message = "hello world"
-p message
+# Rubyのデータはすべてオブジェクト
 
-# 定数
-ADMIN_EMAIL = "mail@example.com"
-p ADMIN_EMAIL
+# String Class
+p "hello world".length

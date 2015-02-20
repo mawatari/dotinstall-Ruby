@@ -1,25 +1,12 @@
-# 数値オブジェクト
-# Numeric Class
+# 文字列オブジェクト
+# String Class
+name = 'mawatari'
+x = "Hello, #{name}" # 変数展開、特殊文字 (\n, \t)
+y = 'Hello, #{name}'
+puts x, y
 
-# 整数
-x = 10
+# 文字列連結
+puts "hello" + " mawatari"
 
-# 実数
-y = 20.5
-
-# 有理数
-z = 1/3r
-# Rational(1, 3)
-
-# 数値はアンダースコアを無視する
-p 100_000_000 # => 100000000
-
-p x % 3 # => 1
-p x ** 3 # => 1000
-p z * 2 # => (2/3)
-
-# 自己代入
-x += 5
-
-# 四捨五入メソッド
-p y.round # => 21
+# 繰り返し
+puts "hello " * 5

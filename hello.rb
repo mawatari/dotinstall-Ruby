@@ -1,12 +1,11 @@
-# 破壊的メソッド
-s = 'mawatari'
-puts s.upcase # => MAWATARI
-puts s # => mawatari
+# 配列オブジェクト
+sales = [5, 8, 4]
+puts sales[0] # => 5
+sales[0] = 10
+puts sales[0] # => 10
 
-puts s.upcase! # => MAWATARI
-puts s # => MAWATARI
-
-# 真偽値を返すメソッド
-s2 = ''
-puts s.empty? # => false
-puts s2.empty? # => true
+# 範囲指定
+p sales[0..2] # => [10, 8, 4]
+p sales[0...2] # => [10, 8]
+p sales[-1] # => 4
+p sales[1, 2] # [8, 4]

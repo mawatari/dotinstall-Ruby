@@ -1,12 +1,12 @@
-# 文字列オブジェクト
-# String Class
-name = 'mawatari'
-x = "Hello, #{name}" # 変数展開、特殊文字 (\n, \t)
-y = 'Hello, #{name}'
-puts x, y
+# 破壊的メソッド
+s = 'mawatari'
+puts s.upcase # => MAWATARI
+puts s # => mawatari
 
-# 文字列連結
-puts "hello" + " mawatari"
+puts s.upcase! # => MAWATARI
+puts s # => MAWATARI
 
-# 繰り返し
-puts "hello " * 5
+# 真偽値を返すメソッド
+s2 = ''
+puts s.empty? # => false
+puts s2.empty? # => true

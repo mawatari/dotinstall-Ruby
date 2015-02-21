@@ -1,17 +1,11 @@
-# ハッシュ
-# Hash Class
-sales = {"mawatari" => 200, "tanaka" => 100}
-p sales["mawatari"] # => 200
+# 型変換
+a = 10
+b = "5"
+# p a + b # => TypeError
+p a + b.to_i # => 15
+p a + b.to_f # => 15.0
+p a.to_s + b # => "105"
+p (a.to_s + b).to_i # => 105
 
-# Symbol
-sales = {:mawatari => 200, :tanaka => 100}
-p sales[:mawatari] # => 200
-
-sales = {mawatari: 200, tanaka: 100}
-p sales[:mawatari] # => 200
-
-# methods
-p sales.size # => 2
-p sales.keys # => [:mawatari, :tanaka]
-p sales.values # => [200, 100]
-p sales.has_key? :mawatari # => true
+h = {mawatari: 100, tanaka: 200}
+p h.to_a # => [[:mawatari, 100], [:tanaka, 200]]

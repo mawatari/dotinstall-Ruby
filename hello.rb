@@ -1,18 +1,12 @@
-# %記法
-s = "you say \"hello\""
-s = %Q(you say "hello")
-puts s # => you say "hello"
-s = %(you say "hello")
-puts s # => you say "hello"
+# 条件分岐
+score = 80
+if score > 60
+  puts "OK!"
+elsif score > 40
+  puts "so so.."
+else
+  puts "NG!!"
+end
 
-s = 'Let\'s go'
-s = %q(Let's go)
-puts s # => Let's go
-
-a = ["a", "b", "c"]
-a = %W(a b c)
-p a # => ["a", "b", "c"]
-
-a = ['a', 'b', 'c']
-a = %w(a b c)
-p a # => ["a", "b", "c"]
+# 後置法
+puts "OK!" if score > 60

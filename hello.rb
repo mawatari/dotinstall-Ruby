@@ -1,27 +1,19 @@
 # 繰り返し処理
-3.times do
-  puts "hello"
+for i in 0..2 do
+  puts i
 end
+# => 0 1 2
 
-# index
-3.times do |i|
-  puts "#{i}: hello"
+for color in ["red", "blue", "pink"] do
+  puts color
 end
+# => red blue pink
 
-# while
-i = 0
-while i < 3 do
-  puts "#{i}: hello"
-  i += 1
+["red", "blue", "pink"].each do |color|
+  puts color
 end
+# => red blue pink
 
-# break, next
-5.times do |i|
-  if i == 3
-    break
-  end
-  if i == 1
-    next
-  end
-  puts "#{i}: hello"
+{red: 100, blue: 200, pink: 300}.each do |color, price|
+  puts "#{color}: #{price}"
 end

@@ -1,8 +1,18 @@
-# クラスの継承
+# アクセサ
 class User
 
   def initialize name
     @name = name
+  end
+
+  # getter
+  def name
+    return @name
+  end
+
+  # setter
+  def setName newName
+    @name = newName
   end
 
   # インスタンスメソッド
@@ -11,15 +21,37 @@ class User
   end
 end
 
-class SubUser < User
-  def shaut
-    puts "HELLO!! fomr #{@name}"
+bob = User.new "Bob"
+bob.sayHi
+p bob.name
+bob.setName "Tom"
+p bob.name
+
+
+# アクセサ
+class AccessorUser
+
+  def initialize name
+    @name = name
+  end
+
+  # getter, setter 両方作る
+  attr_accessor :name
+
+  # getterのみ
+  # attr_reader :name
+
+  # setterのみ
+  # attr_writer :name
+
+  # インスタンスメソッド
+  def sayHi
+    puts "Hello, my name is #{@name}."
   end
 end
 
-tom = User.new "Tom"
-bob = SubUser.new "Bob"
-
-tom.sayHi
+bob = AccessorUser.new "Bob"
 bob.sayHi
-bob.shaut
+p bob.name
+bob.name = "Tom"
+p bob.name

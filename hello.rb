@@ -1,29 +1,25 @@
-# クラス
+# クラスの継承
 class User
 
-  # クラス変数
-  @@count = 0
-
   def initialize name
-    # インスタンス変数
     @name = name
-    @@count += 1
   end
 
   # インスタンスメソッド
   def sayHi
     puts "Hello, my name is #{@name}."
   end
+end
 
-  # クラスメソッド
-  def User.sayHello
-    puts "Hello from User class (#{@@count} users)"
+class SubUser < User
+  def shaut
+    puts "HELLO!! fomr #{@name}"
   end
 end
 
-User.sayHello
-
 tom = User.new "Tom"
-bob = User.new "Bob"
+bob = SubUser.new "Bob"
 
-User.sayHello
+tom.sayHi
+bob.sayHi
+bob.shaut

@@ -1,14 +1,15 @@
-# 関数的メソッド
-def sayHi(name = "Naoto")
-  puts "hello! " + name
+# クラス
+class User
+  def initialize name
+    @name = name
+  end
+
+  def sayHi
+    puts "Hello, my name is #{@name}."
+  end
 end
 
-sayHi "Tom"
-sayHi "Bob"
-sayHi
-
-def getGreet(name = "Naoto")
-  return "hello! " + name
-end
-
-puts getGreet "Steve"
+tom = User.new "Tom"
+bob = User.new "Bob"
+tom.sayHi
+bob.sayHi

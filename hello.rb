@@ -1,57 +1,11 @@
-# アクセサ
-class User
+# Time
+t = Time.now
+p t
+p t.year, t.mon
 
-  def initialize name
-    @name = name
-  end
+t = Time.new 2015, 3, 24, 12, 32, 51
+p t
+t += 10
+p t
 
-  # getter
-  def name
-    return @name
-  end
-
-  # setter
-  def setName newName
-    @name = newName
-  end
-
-  # インスタンスメソッド
-  def sayHi
-    puts "Hello, my name is #{@name}."
-  end
-end
-
-bob = User.new "Bob"
-bob.sayHi
-p bob.name
-bob.setName "Tom"
-p bob.name
-
-
-# アクセサ
-class AccessorUser
-
-  def initialize name
-    @name = name
-  end
-
-  # getter, setter 両方作る
-  attr_accessor :name
-
-  # getterのみ
-  # attr_reader :name
-
-  # setterのみ
-  # attr_writer :name
-
-  # インスタンスメソッド
-  def sayHi
-    puts "Hello, my name is #{@name}."
-  end
-end
-
-bob = AccessorUser.new "Bob"
-bob.sayHi
-p bob.name
-bob.name = "Tom"
-p bob.name
+p t.strftime "Updated: %Y/%m/%d"
